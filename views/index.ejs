@@ -1,0 +1,59 @@
+<div class="main-container">
+    <% var logged_in = (cookie.session_id && session_list[cookie.session_id]); %>
+
+    <div class="user-section">
+        <% if (logged_in) { %>
+            <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; margin: 1rem auto;">
+            <a class="nav-link" href="/vizualizare-cos" style="background-color: #007BFF; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: 500; text-decoration: none; border: none; cursor: pointer;">Cosul meu</a>
+            <% if (session_list[cookie.session_id].grade == 2) { %>
+                <a class="admin-link" href="/administrator" style="background-color: #007BFF; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: 500; text-decoration: none; border: none; cursor: pointer;">Admin</a>
+            <% } %>
+            </div>
+        <% } %>
+    </div>
+
+    <div class="action-buttons">
+        <% if (logged_in) { %>
+        <% } else { %>
+            <a class="btn-link" href="/autentificare">Autentificare</a>
+        <% } %>
+
+        <a class="btn-link" href="/creare-db">Creare DB</a>
+        <a class="btn-link" href="/inserare-db">Incarcare DB</a>
+        <a class="btn-link" href="/chestionar">Chestionar</a>
+    </div>
+
+    <% if (produse) { %>
+        <div id="shop" class="shop-container">
+            <div class="product-list">
+                <div class="product-header">
+                    <span class="column-title">Nume</span>
+                    <span class="column-title">Cantitate valabila</span>
+                    <span class="column-title">Pret</span>
+                </div>
+                <% for (var i = 0, j = produse.length, txc = produse[i]; i < j; txc = produse[++i]) { %>
+                    <div class="product-card">
+                        <div class="product-detail">
+                            <span><%= txc.nume %></span>
+                        </div>
+                        <div class="product-detail">
+                            <span><%= txc.cantitate %></span>
+                        </div>
+                        <div class="product-detail">
+                            <span><%= txc.pret %> RON</span>
+                        </div>
+                        <% if (logged_in && txc.cantitate) { %>
+                            <div class="product-action">
+                                <form class="add-to-cart-form" method="POST" action="/adaugare-cos">
+                                    <input type="hidden" name="id" value="<%= txc.id %>">
+                                    <input type="number" name="qty" value="1" min="1" max="<%= txc.cantitate %>" style="width: 60px; margin-right: 0.5rem; padding: 0.3rem; border-radius: 4px; border: 1px solid #ccc;">
+                                    <button class="btn" type="submit">Cumpara</button>
+                                </form>
+                            </div>
+                        <% } %>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    <% } %>
+</div>

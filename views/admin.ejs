@@ -1,0 +1,50 @@
+<div class="admin-panel">
+    <div id="shop" class="admin-shop">
+        <div class="admin-list">
+            <div class="admin-header">
+                <span class="column-title">Nume</span>
+                <span class="column-title">Cantitate valabila</span>
+                <span class="column-title">Pret</span>
+            </div>
+
+            <% if (produse) for (var i = 0, j = produse.length, txc = produse[i]; i < j; txc = produse[++i]) { %>
+                <div class="admin-card">
+                    <div class="admin-detail">
+                        <span><%= txc.nume %></span>
+                    </div>
+                    <div class="admin-detail">
+                        <span><%= txc.cantitate %></span>
+                    </div>
+                    <div class="admin-detail">
+                        <span><%= txc.pret %> RON</span>
+                    </div>
+                    <div class="admin-action">
+                        <form method="POST" action="/admin">
+                            <input type="hidden" name="id" value="<%= txc.id %>">
+                            <input type="hidden" name="action" value="delete">
+                            <button class="btn" type="submit">Sterge produs</button>
+                        </form>
+                    </div>
+                </div>
+            <% } %>
+
+            <div class="admin-card creator-card">
+                <form method="POST" action="/admin">
+                    <input type="hidden" name="action" value="add">
+                    <div class="admin-detail">
+                        <input type="text" name="nume" placeholder="Nume">
+                    </div>
+                    <div class="admin-detail">
+                        <input type="text" name="cantitate" placeholder="Cantitate">
+                    </div>
+                    <div class="admin-detail">
+                        <input type="text" name="pret" placeholder="Pret">
+                    </div>
+                    <div class="admin-action">
+                        <button class="btn" type="submit">Adauga produs</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

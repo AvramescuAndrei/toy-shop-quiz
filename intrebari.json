@@ -1,0 +1,155 @@
+[
+    {
+      "intrebare": "1. Cand a fost infiintata compania LEGO ?",
+      "variante": [
+        "1931",
+        "1932",
+        "1933",
+        "1934"
+      ],
+      "corect": 1
+    },
+    {
+        "intrebare": "2. Care este cel mai mare distribuitor de jucarii din Romania ?",
+        "variante": [
+          "McDonald's",
+          "LEGO",
+          "Noriel",
+          "Jumbo"
+        ],
+        "corect": 3
+    },
+    {
+        "intrebare": "3. Cum se cheama aceasta jucarie ?",
+        "poza": "poza_jucarie1.avif",
+        "variante": [
+          "Bombardilo Crocodilo",
+          "Spioniro Golubiro",
+          "Tung Tung Tung Sahur",
+          "Liri Rila Rila"
+        ],
+        "corect": 2
+    },
+    {
+        "intrebare": "4. Ce sunt Bakuganii ?",
+        "variante": [
+          "Figurine",
+          "Papuși",
+          "Animale de pluș",
+          "Puzzle-uri"
+        ],
+        "corect": 0
+    },
+    {
+        "intrebare": "5. Ce fel de jucărie este un fidget spinner ?",
+        "variante": [
+          "De constructie",
+          "De rol",
+          "Antistres",
+          "De cantat"
+        ],
+        "corect": 2
+    },
+    {
+        "intrebare": "6. Care este principalul risc asociat cu jucăriile pentru copii sub 3 ani ?",
+        "variante": [
+          "Timp petrecut excesiv",
+          "Pericol de lovire",
+          "Pericol de taiere",
+          "Pericol de inghitire"
+        ],
+        "corect": 3
+    },
+    {
+        "intrebare": "7. Ce jucărie inventată în Ungaria este cunoscută pentru capacitatea de a dezvolta gândirea logică și vizuală ?",
+        "variante": [
+          "Tangram",
+          "Cub Rubik",
+          "Kendama",
+          "Domino"
+        ],
+        "corect": 1
+    },
+    {
+        "intrebare": "8. Ce tip de jucărie este 'Hot Wheels' ?",
+        "variante": [
+          "Mașinuță metalică de colecție",
+          "Set de construcție",
+          "Păpușă",
+          "Joc video"
+        ],
+        "corect": 0
+    },
+    {
+        "intrebare": "9. Cum se cheama aceasta jucarie ?",
+        "poza": "poza_jucarie.2.avif",
+        "variante": [
+          "Liri Liri Larila",
+          "Bombardino Crocodilo",
+          "Tralalero Tralala",
+          "Bombini Guspini"
+        ],
+        "corect": 2
+    },
+    {
+        "intrebare": "10. Ce tip de jucărie este Beyblade ?",
+        "variante": [
+          "Joc video",
+          "Joc de cărți",
+          "Jucărie de duel rotativ",
+          "Figurină articulată"
+        ],
+        "corect": 2
+    },
+    {
+        "intrebare": "11. Cate culori diferite are un cub rubik ?",
+        "variante": [
+          "4",
+          "6",
+          "8",
+          "10"
+        ],
+        "corect": 1
+    },
+    {
+        "intrebare": "12. Ce jucărie constă dintr-un disc plat care zboară când este aruncat ?",
+        "variante": [
+          "Yo-yo",
+          "Kendama",
+          "Beyblade",
+          "Frisbee"
+        ],
+        "corect": 3
+    },
+    {
+        "intrebare": "13. Cine este producătorul păpușilor Barbie ?",
+        "variante": [
+          "Fisher-Price",
+          "Lego",
+          "Hasbro",
+          "Mattel"
+        ],
+        "corect": 3
+    },
+    {
+        "intrebare": "14. Cum il cheama pe domnul de pe tabla de Monopoly ?",
+        "poza": "poza_imagine3.avif",
+        "variante": [
+          "Milburn Pennybags",
+          "Bertram Goldsmith",
+          "Clarence Silverstone",
+          "Reginald Copperfield"
+        ],
+        "corect": 0
+    },
+    {
+        "intrebare": "15. Cate patrate sunt pe o tabla de sah ? Dar piese in total la inceperea unui meci ?",
+        "variante": [
+          "60, 32",
+          "64, 32",
+          "64, 30",
+          "60, 30"
+        ],
+        "corect": 1
+    }
+]

@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="rezultat-corect">
+    Ai răspuns corect la <strong><%= correct %></strong> întrebări.
+    </div>
+    <hr>
+
+    <% intrebari.forEach(function(intrebare) { 
+        const userAnswer = raspunsuriUtilizator[intrebare.intrebare];
+        const correctAnswer = intrebare.variante[intrebare.corect];
+        const isCorrect = userAnswer === correctAnswer;
+        const containerClass = isCorrect ? 'raspuns-corect' : 'raspuns-gresit';
+    %>
+        <div class="intrebare-container <%= containerClass %>">
+            <strong>Intrebare:</strong> <%= intrebare.intrebare %> <br>
+
+            <% if (intrebare.poza) { %>
+                <img src="<%= intrebare.poza %>" class="intrebare-imagine">
+            <% } %>
+
+            <strong>Raspunsul tau:</strong> 
+            <% if(userAnswer) { %>
+                <%= userAnswer %>
+                <% if (!isCorrect) { %>
+                    <span class="gresit">(gresit)</span>
+                <% } else { %>
+                    <span class="corect">(corect)</span>
+                <% } %>
+            <% } else { %>
+                <em>Nu ai raspuns</em>
+            <% } %>
+            <br>
+            <% if (!isCorrect) { %>
+                <strong>Raspunsul corect era:</strong> <%= correctAnswer %>
+            <% } %>
+        </div>
+    <% }); %>
+</div>

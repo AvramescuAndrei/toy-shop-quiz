@@ -1,0 +1,17 @@
+<div id="login-container">
+    <% if (cookie.mesajEroare) { %>
+        <p class="error"><%= cookie.mesajEroare %></p>
+    <% } %>
+    <form method="POST" action="/verificare-autentificare">
+        <fieldset>
+            <legend>Autentificare</legend>
+            <label for="username">ID Utilizator</label>
+            <input type="text" name="username" id="username" value="">
+            <br><br>
+            <label for="password">Parola</label>
+            <input type="password" name="password" id="password" value="">
+            <br><br>
+            <button type="submit">Trimite</button>
+        </fieldset>
+    </form>
+</div>

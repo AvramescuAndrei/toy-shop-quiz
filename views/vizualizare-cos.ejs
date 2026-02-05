@@ -1,0 +1,29 @@
+<div class="cart-container">
+    <% var user_info = session_list[cookie.session_id]; if (user_info && user_info.orders) {%>
+        <p class="basket-header">În coșul dumneasvoastră sunt următoarele produse :</p>
+        <div class="cart-list">
+            <% for (var k in user_info.orders) { var p_info = produse_map[k]; var qty = user_info.orders[k];%>
+                <div class="cart-item">
+                    <div class="cart-detail">
+                        <span><%= p_info.nume %></span>
+                    </div>
+                    <div class="cart-detail">
+                        <span><%= qty %></span>
+                    </div>
+                    <div class="cart-detail">
+                        <span><%= p_info.pret * qty %> RON</span>
+                    </div>
+                    <div class="cart-action">
+                        <form class="remove-from-cart-form" method="POST" action="/adaugare-cos">
+                            <input type="hidden" name="id" value="<%= p_info.id %>">
+                            <input type="hidden" name="action" value="delete">
+                            <button class="btn" type="submit">Sterge din cos</button>
+                        </form>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    <% } else { %>
+        <p class="error-message">Eroare interna.</p>
+    <% } %>
+</div>

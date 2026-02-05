@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PW</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Magazin/Chestionar - Jucării</h1>
+
+        <% if (cookie?.session_id && session_list?.[cookie.session_id]) { %>
+            <div class="main-auth-status">
+                Autentificat ca <strong><%= session_list[cookie.session_id].username %></strong>
+                <form method="POST" action="/logout" style="display:inline;">
+                    <button class="main-btn-logout" type="submit">Deloghează-te</button>
+                </form>
+            </div>
+        <% } %>
+    </header>
+
+    <main>
+        <%- body %>
+    </main>
+
+    <footer>
+        <!-- Optional footer content -->
+    </footer>
+</body>
+</html>

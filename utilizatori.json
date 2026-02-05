@@ -1,0 +1,32 @@
+[
+{
+  "username":"Andrei",
+  "password":"Andrei",
+  "lastname":"a",
+  "firstname":"a",
+  "email":"rew@gmail.com",
+  "phone":"432",
+  "favorite-food":"Pizza",
+  "fav-color":"#000000",
+  "birthdate":"2025-04-04",
+  "birthtime":"03:03",
+  "age":"39",
+  "personal-url":"http://aaa.com",
+  "grade":1
+  },
+  {
+  "username":"admin",
+  "password":"admin",
+  "lastname":"abbbb",
+  "firstname":"abbbb",
+  "email":"bbbbb@gmail.com",
+  "phone":"123",
+  "favorite-food":"Pizza",
+  "fav-color":"#000000",
+  "birthdate":"2025-04-04",
+  "birthtime":"03:03",
+  "age":"39",
+  "personal-url":"http://aaa.com",
+  "grade": 2
+  }
+]

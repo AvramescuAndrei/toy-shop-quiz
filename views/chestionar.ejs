@@ -1,0 +1,19 @@
+<div>
+    <form method="POST" action="/rezultat-chestionar">
+            <% for(var intrebare of intrebari) {%>
+                <fieldset>
+                <legend><b><%= intrebare.intrebare%></b></legend>
+                <img src="<%= intrebare.poza%>" style="width: 300px; display: block; margin: 0 auto;"></img>
+                <br>
+                <% for(var varianta of intrebare.variante) {%>
+                    <input type="radio" name="<%= intrebare.intrebare %>" value="<%= varianta %>">
+                    <label for="<%= varianta%>"><i><%= varianta%></i></label>
+                    <br>
+                <%}%>
+                </fieldset>
+                <br>
+            <%}%>
+            <br>
+            <button type="submit" class="buton-trimite">Trimite</button>    
+    </form>
+</div>
